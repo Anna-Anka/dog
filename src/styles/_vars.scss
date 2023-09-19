@@ -1,12 +1,16 @@
-$white: #ffffff;
-$black: #000000;
+:root {
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-dark-900: #202020;
+	--color-blue-800: #1f2c65;
+	--color-yellow-600: #e9b938;
+	--color-orange-200: #fce9d7;
+	--color-orange-600: #6d6359;
 
-$fw-300: 300;
-$fw-400: 400;
-$fw-500: 500;
-$fw-600: 600;
-$fw-700: 700;
-$fw-800: 800;
-$fw-900: 900;
+	--font-family-proze: 'Proza';
 
-$roboto: 'Roboto';
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+}

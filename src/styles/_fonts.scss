@@ -9,10 +9,7 @@
     }
 }
 
-//Arimo
-//@include font-face(Arimo, Arimo-Regular, 400);
-//@include font-face(Arimo, Arimo-Medium, 500);
-//@include font-face(Arimo, Arimo-SemiBold, 700);
-//@include font-face(Arimo, Arimo-Bold, 700);
-//@include font-face(Arimo, Arimo-ExtraBold, 800);
-//@include font-face(Arimo, Arimo-Black, 800);
+@include font-face(ProzaLibre, ProzaLibre-Regular, 400);
+@include font-face(ProzaLibre, ProzaLibre-Medium, 500);
+@include font-face(ProzaLibre, ProzaLibre-SemiBold, 600);
+@include font-face(ProzaLibre, ProzaLibre-Bold, 700);
