@@ -29,9 +29,28 @@ body {
 }
 
 .button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	@include flex-all-center;
+	padding: 15px 30px;
+	font-weight: var(--font-weight-bold);
+	font-size: 18px;
+	line-height: 1.1;
+	background-color: var(--color-yellow-600);
+	border-radius: 15px;
+
+	&--border {
+		background-color: transparent;
+		border: 2px solid var(--color-yellow-600);
+	}
+}
+
+.title {
+	margin-bottom: 50px;
+	font-weight: var(--font-weight-bold);
+	font-size: 40px;
+}
+
+.section {
+	@include adaptiv-value-base('padding-bottom', 100, 50, 1);
 }
 
 .sr-only {
@@ -60,6 +79,8 @@ body {
 .logo {
 	display: inline-block;
 	width: 100%;
+	width: 147px;
+	height: 82px;
 
 	&__img {
 		width: 100%;

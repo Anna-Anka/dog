@@ -1,9 +1,9 @@
 @use 'sass:math';
 
 $maxWidth: 1920;
-$maxWidthContainer: 1390;
+$maxWidthContainer: 1236;
 $minWidth: 360;
-$containerPadding: 30;
+$containerPadding: 15;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 //@include adaptiv-value-base("padding", 30, 5, 0);
