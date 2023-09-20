@@ -1,6 +1,6 @@
 .footer {
+	padding: 4px 0;
 	color: var(--color-white);
-	font-family: var(--font-family-proza);
 	background-color: var(--color-blue-800);
 
 	@include mq(sm) {
