@@ -1,3 +1,19 @@
 .footer {
-    
+	color: var(--color-white);
+	font-family: var(--font-family-proza);
+	background-color: var(--color-blue-800);
+
+	@include mq(sm) {
+		padding: 12px 0;
+	}
+
+	&__wrapper {
+		@include flex-center-sb;
+
+		@include mq(sm) {
+			flex-direction: column;
+			gap: 4px;
+			justify-content: center;
+		}
+	}
 }
