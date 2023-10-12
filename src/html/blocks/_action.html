@@ -1,0 +1,47 @@
+<section class="action section">
+    <div class="container">
+        <h2 class="action__title title">
+            Надо действовать
+        </h2>
+        <ul class="action__wrapper">
+            <div class="action__descr">
+                <div class="action__text">
+                    <p>
+                        Порой поведение собаки становится опасным для других людей и  животных. В такой ситуации необходима экстренная помощь опытного специлиста!
+                    </p>
+                </div>
+                <a class="action__link button" href="#">Оставить заявку</a>
+            </div>
+            <ul class="action__steps">
+                <li class="action__step">
+                    @include('../components/cards/_step-card.html', {
+                    'number' : '1',
+                    'title' : 'Онлайн-запись',
+                    'text' : '<p>Вы выбираете нужный тариф и оставляете заявку</p>'
+                    })
+                </li>
+                <li class="action__step">
+                    @include('../components/cards/_step-card.html', {
+                    'number' : '2',
+                    'title' : 'Консультация',
+                    'text' : '<p>Мы выбираем удобный день и время для индивидуальной консультации</p>'
+                    })
+                </li>
+                <li class="action__step">
+                    @include('../components/cards/_step-card.html', {
+                    'number' : '3',
+                    'title' : 'Коррекция',
+                    'text' : '<p>Я наблюдаю за вашим взаимодействием с собакой. Даю советы у рекомендации для устранения проблем</p>'
+                    })
+                </li>
+                <li class="action__step">
+                    @include('../components/cards/_step-card.html', {
+                    'number' : '4',
+                    'title' : 'Повторная консультация',
+                    'text' : '<p>Если у собаки закрeпилось негативное поведение, то за один сеанс этого не исправить, понадобится несколько занятий</p>'
+                    })
+                </li>
+            </ul>
+    </div>
+    </div>
+</section>

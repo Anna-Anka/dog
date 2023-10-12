@@ -1,0 +1,30 @@
+.step-card {
+	position: relative;
+	width: 100%;
+	padding-left: 39px;
+
+	&__number {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 30px;
+		height: 30px;
+		color: var(--color-white);
+		text-align: center;
+		background-color: var(--color-blue-800);
+		border-radius: 50%;
+		@include flex-all-center;
+	}
+
+	&__title {
+		margin-bottom: 12px;
+	}
+
+	&__text {
+		p {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

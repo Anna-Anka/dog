@@ -50,6 +50,11 @@ body {
 	font-size: 40px;
 }
 
+.subtitle {
+	font-weight: var(--font-weight-semibold);
+	font-size: 24px;
+}
+
 .section {
 	@include adaptive-value-base('padding-bottom', 100, 50, 1);
 }
