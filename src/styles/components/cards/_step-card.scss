@@ -1,29 +1,29 @@
 .step-card {
 	position: relative;
 	width: 100%;
-	padding-left: 39px;
+	@include adaptive-value-base('padding-left', 39, 32, 1);
 
 	&__number {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 30px;
-		height: 30px;
 		color: var(--color-white);
 		text-align: center;
 		background-color: var(--color-blue-800);
 		border-radius: 50%;
+		@include adaptive-value-base('width', 30, 26, 1);
+		@include adaptive-value-base('height', 30, 26, 1);
 		@include flex-all-center;
 	}
 
 	&__title {
-		margin-bottom: 12px;
+		@include adaptive-value-base('margin-bottom', 12, 8, 1);
 	}
 
 	&__text {
 		p {
 			&:not(:last-child) {
-				margin-bottom: 10px;
+				@include adaptive-value-base('margin-bottom', 10, 6, 1);
 			}
 		}
 	}

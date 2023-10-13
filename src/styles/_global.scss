@@ -1,7 +1,7 @@
 body {
 	color: var(--color-dark-900);
 	font-weight: var(--font-weight-regular);
-	font-size: 18px;
+	@include adaptive-value-base('font-size', 18, 16, 1);
 	font-family: var(--font-family-openSans), Arial, sans-serif;
 	line-height: 1.3;
 	background-color: var(--color-white);
@@ -33,7 +33,6 @@ body {
 	@include flex-all-center;
 	padding: 15px 30px;
 	font-weight: var(--font-weight-bold);
-	font-size: 18px;
 	line-height: 1.1;
 	background-color: var(--color-yellow-600);
 	border-radius: 15px;
@@ -45,14 +44,14 @@ body {
 }
 
 .title {
-	margin-bottom: 50px;
 	font-weight: var(--font-weight-bold);
-	font-size: 40px;
+	@include adaptive-value-base('font-size', 40, 30, 1);
+	@include adaptive-value-base('margin-bottom', 50, 36, 1);
 }
 
 .subtitle {
 	font-weight: var(--font-weight-semibold);
-	font-size: 24px;
+	@include adaptive-value-base('font-size', 24, 20, 1);
 }
 
 .section {

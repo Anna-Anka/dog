@@ -2,26 +2,59 @@
 	&__wrapper {
 		display: flex;
 		gap: 30px;
+
+		@include mq(lg) {
+			flex-direction: column;
+		}
 	}
 
 	&__descr {
-		width: 35%;
 		display: flex;
 		flex-direction: column;
+		width: 35%;
 	}
 
 	&__text {
-		margin-bottom: 30px;
+		@include mq(lg, min) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__link {
+		display: none;
 		align-self: flex-start;
+
+		@include mq(lg, min) {
+			display: flex;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+		}
+
+		&--mobile {
+			display: flex;
+			@include mq(lg, min) {
+				display: none;
+			}
+		}
 	}
 
 	&__steps {
-		width: 65%;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 35px 25px;
+		width: 65%;
+
+		@include mq(sm) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__descr,
+	&__steps {
+		@include mq(lg) {
+			width: 100%;
+		}
 	}
 }
