@@ -9,9 +9,14 @@
 
 	&__items {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 47%));
-		gap: 30px;
+		grid-template-columns: repeat(2, 1fr);
+		@include adaptive-value-base('gap', 30, 16, 1);
 		align-items: flex-end;
+
+		@include mq(sm) {
+			grid-template-columns: 1fr;
+			gap: 26px;
+		}
 	}
 
 	&__item {

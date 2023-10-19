@@ -14,50 +14,69 @@
 		color: var(--color-white);
 		background-color: var(--color-blue-800);
 		border-radius: 15px 0 150px 0;
+
+		@include mq(sm) {
+			max-width: 100%;
+		}
 	}
 
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		padding: 25px 20px 35px;
+
+		@include mq(lg) {
+			padding: 20px 16px 24px;
+		}
 	}
 
 	&__title {
-		margin-bottom: 25px;
 		text-align: center;
+		@include adaptive-value-base('margin-bottom', 25, 18, 1);
 	}
 
 	&__items {
-		margin-bottom: 40px;
+		@include adaptive-value-base('margin-bottom', 40, 25, 1);
 	}
 
 	li {
 		position: relative;
-		padding-left: 34px;
+		@include adaptive-value-base('padding-left', 34, 24, 1);
 
 		&::before {
 			position: absolute;
-			top: 0;
 			left: 0;
-			width: 24px;
-			height: 24px;
+			@include adaptive-value-base('top', 0, 2, 1);
+			@include adaptive-value-base('width', 24, 16, 1);
+			@include adaptive-value-base('height', 24, 16, 1);
+
 			background-image: url('../img/icons/paw.svg');
 			content: '';
 			@include bg-contain;
 		}
 
 		&:not(:last-child) {
-			margin-bottom: 20px;
+			@include adaptive-value-base('margin-bottom', 20, 15, 1);
 		}
 	}
 
 	&__footer {
+		gap: 8px;
 		margin-top: auto;
 		@include flex-center-sb;
+
+		@include mq(md) {
+			flex-direction: column;
+		}
 	}
 
 	&__price {
 		font-weight: var(--font-weight-semibold);
+	}
+
+	&__button {
+		@include mq(md) {
+			width: 100%;
+		}
 	}
 }
