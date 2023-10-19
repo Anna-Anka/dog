@@ -1,0 +1,34 @@
+<section class="tariffs section">
+    <div class="container">
+        <h2 class="sr-only">Выберите тариф</h2>
+        <!-- Попробовать сделать role как items -->
+        <div class="tariffs__items">
+            <div class="tariffs__item">
+                <span class="tariffs__title title" aria-hidden="true">Выберите тариф</span>
+                @include('../components/cards/_tariff-card.html', {
+                'title' : 'Групповые занятия',
+                'text': [
+                'Продолжительность занятия — от 60 до 90 минут',
+                'В группе от 5 до 8 человек',
+                'Собака привыкнет работать в стае',
+                'У вас будет возможность пообащаться с другими владельцами и узнать их опыт',
+                ],
+                'price' : '1300' })
+            </div>
+            <div class="tariffs__item">
+                @include('../components/cards/_tariff-card.html', {
+                'title' : 'Индивидуальные занятия',
+                'extra' : 'Идеально для коррекции поведения',
+                'text': [
+                'Продолжительность занятия — от 60 до 90 минут',
+                'Проработаем вашу проблему',
+                'Скорректируем поведение собаки',
+                'Отвечу на все вопросы',
+                'Дам рекомендации',
+                'Научитесь понимать свою собаку',
+                ],
+                'price' : '1500' })
+            </div>
+        </div>
+    </div>
+</section>

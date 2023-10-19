@@ -1,0 +1,63 @@
+.tariff-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	background-color: var(--color-orange-200);
+	border-radius: 15px;
+
+	&__extra {
+		display: block;
+		width: 100%;
+		max-width: 200px;
+		padding: 10px 32px 15px 10px;
+		color: var(--color-white);
+		background-color: var(--color-blue-800);
+		border-radius: 15px 0 150px 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: 25px 20px 35px;
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		text-align: center;
+	}
+
+	&__items {
+		margin-bottom: 40px;
+	}
+
+	li {
+		position: relative;
+		padding-left: 34px;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 24px;
+			height: 24px;
+			background-image: url('../img/icons/paw.svg');
+			content: '';
+			@include bg-contain;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__footer {
+		margin-top: auto;
+		@include flex-center-sb;
+	}
+
+	&__price {
+		font-weight: var(--font-weight-semibold);
+	}
+}

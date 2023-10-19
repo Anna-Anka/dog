@@ -1,0 +1,23 @@
+.tariffs {
+	.container {
+		max-width: 1003px;
+	}
+
+	&__title {
+		display: inline-block;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 47%));
+		gap: 30px;
+		align-items: flex-end;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
+}

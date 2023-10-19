@@ -1,0 +1,15 @@
+<article class="tariff-card">
+    @if ( typeof extra !== 'undefined' && extra ) {
+    <span class="tariff-card__extra"> @extra </span>
+    }
+    <div class="tariff-card__wrapper">
+        <h3 class="tariff-card__title subtitle">@title</h3>
+        <ul class="tariff-card__items">
+            @for (var i = 0; i < text.length; i++) { <li>`+text[i]+`</li> }
+        </ul>
+        <footer class="tariff-card__footer">
+            <span class="tariff-card__price">@price ₽ / занятие</span>
+            <button class="tariff-card__button button" type="button">Записаться</button>
+        </footer>
+    </div>
+</article>
