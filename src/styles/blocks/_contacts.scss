@@ -1,0 +1,49 @@
+.contacts {
+	&__wrapper {
+		display: flex;
+		gap: 35px;
+	}
+
+	&__form {
+		width: 54%;
+		position: relative;
+		padding: 40px 40px 40px 0;
+		background-color: var(--color-orange-200);
+		border-radius: 0 15px 100px 0;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: -50vw;
+			z-index: -1;
+			width: 50vw;
+			height: 100%;
+			background-color: inherit;
+			content: '';
+		}
+	}
+
+	&__info {
+		width: 46%;
+	}
+
+	&__subtitle {
+		margin-bottom: 26px;
+	}
+
+	&__items,
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	&__link {
+		color: var(--color-blue-800);
+	}
+}
