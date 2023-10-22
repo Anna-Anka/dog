@@ -5,8 +5,8 @@
 	}
 
 	&__form {
-		width: 54%;
 		position: relative;
+		width: 54%;
 		padding: 40px 40px 40px 0;
 		background-color: var(--color-orange-200);
 		border-radius: 0 15px 100px 0;
@@ -38,12 +38,13 @@
 		}
 	}
 
-	&__subtitle {
-		margin-bottom: 10px;
+	&__subtext {
 		display: block;
+		margin-bottom: 5px;
 	}
 
 	&__link {
 		color: var(--color-blue-800);
+		font-weight: var(--font-weight-semibold);
 	}
 }

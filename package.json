@@ -92,7 +92,6 @@
 		"gulp-concat": "^2.6.1",
 		"gulp-filter": "^7.0.0",
 		"gulp-group-css-media-queries": "^1.2.2",
-		"gulp-html-beautify": "^1.0.1",
 		"gulp-newer": "^1.4.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"imagemin-giflossy": "^5.1.10",
