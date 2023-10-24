@@ -1,11 +1,15 @@
 .form {
 	display: flex;
 	flex-direction: column;
-	gap: 25px;
+	@include adaptive-value-base('gap', 26, 16, 1);
 
 	&__items {
 		display: flex;
-		gap: 25px;
+		@include adaptive-value-base('gap', 26, 16, 1);
+
+		@include mq(md) {
+			flex-direction: column;
+		}
 	}
 
 	&__item {
@@ -14,11 +18,11 @@
 
 	&__field {
 		width: 100%;
-		padding: 15px;
 		background-color: var(--color-white);
 		border: 2px solid transparent;
 		border-radius: 5px;
 		transition: border-color 0.3s;
+		@include adaptive-value-base('padding', 15, 10, 1);
 
 		&::placeholder {
 			color: var(--color-orange-600);
@@ -38,7 +42,7 @@
 		}
 
 		&--message {
-			min-height: 200px;
+			@include adaptive-value-base('min-height', 200, 120, 1);
 			resize: vertical;
 		}
 	}

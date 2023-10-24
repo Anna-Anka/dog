@@ -2,6 +2,10 @@
 	&__wrapper {
 		display: flex;
 		gap: 35px;
+
+		@include mq(sm) {
+			flex-direction: column;
+		}
 	}
 
 	&__form {
@@ -10,6 +14,14 @@
 		padding: 40px 40px 40px 0;
 		background-color: var(--color-orange-200);
 		border-radius: 0 15px 100px 0;
+
+		@include mq(md) {
+			padding: 30px 30px 30px 0;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+		}
 
 		&::before {
 			position: absolute;
@@ -25,10 +37,14 @@
 
 	&__info {
 		width: 46%;
+
+		@include mq(sm) {
+			width: 100%;
+		}
 	}
 
 	&__subtitle {
-		margin-bottom: 26px;
+		@include adaptive-value-base('margin-bottom', 26, 20, 1);
 	}
 
 	&__items,
