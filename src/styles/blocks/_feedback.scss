@@ -1,0 +1,45 @@
+.feedback {
+	.container {
+		max-width: 1100px;
+	}
+
+	&__swiper {
+		position: relative;
+	}
+
+	&__buttons {
+		position: absolute;
+		bottom: 0;
+		left: 57.5%;
+		z-index: 1;
+		display: flex;
+		transform: translateX(-100%);
+	}
+
+	&__button {
+		position: relative;
+		right: unset;
+		left: unset;
+		width: 43px;
+		height: 46px;
+		margin-top: 0;
+		background-color: var(--color-blue-800);
+
+		&::after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 13px;
+			height: 26px;
+			font-size: 0;
+			background-image: url('../img/icons/arrow.svg');
+			transform: translate(-50%, -50%);
+			content: '';
+			@include bg-contain;
+		}
+
+		&--next {
+			transform: rotate(180deg);
+		}
+	}
+}
