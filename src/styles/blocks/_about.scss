@@ -1,0 +1,17 @@
+.about {
+	background-color: var(--color-orange-200);
+
+	&__content {
+		width: 100%;
+		max-width: 690px;
+		padding: 40px 0;
+	}
+
+	&__text {
+		p {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
