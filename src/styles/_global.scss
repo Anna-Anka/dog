@@ -113,3 +113,41 @@ body {
 		opacity: 1;
 	}
 }
+
+.video {
+	position: relative;
+	@include bg-cover;
+
+	&__play {
+		position: absolute;
+		@include adaptive-value-base('width', 64, 44, 1);
+		@include adaptive-value-base('height', 64, 44, 1);
+		background-color: var(--color-white);
+		border-radius: 50%;
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+		}
+
+		&::before {
+			top: -8px;
+			left: -8px;
+			@include adaptive-value-base('width', 80, 60, 1);
+			@include adaptive-value-base('height', 80, 60, 1);
+			border: 2px solid var(--color-white);
+			border-radius: 50%;
+		}
+
+		&::after {
+			@include bg-contain;
+			top: 50%;
+			left: 50%;
+			@include adaptive-value-base('width', 36, 24, 1);
+			@include adaptive-value-base('height', 36, 24, 1);
+			background-image: url('../img/icons/play.svg');
+			transform: translate(-44%, -50%);
+		}
+	}
+}

@@ -1,16 +1,98 @@
 .about {
 	background-color: var(--color-orange-200);
 
+	@include mq(lg) {
+		@include adaptive-value-base('padding-bottom', 90, 70, 1);
+		@include adaptive-value-base('padding-top', 90, 70, 1);
+	}
+
+	&__container {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+		padding-right: calc((100vw - 1206px) / 2);
+
+		@include mq(xl) {
+			padding: 0 15px;
+		}
+
+		@include mq(lg) {
+			flex-direction: column;
+			gap: 0;
+			align-items: flex-start;
+		}
+	}
+
+	&__title {
+		display: block;
+		@include mq(lg) {
+			display: none;
+		}
+
+		&--mobile {
+			@include mq(lg, min) {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				margin: 1px;
+				padding: 0;
+				overflow: hidden;
+				white-space: nowrap;
+				border: 0;
+				clip: rect(0 0 0 0);
+				clip-path: inset(100%);
+			}
+		}
+	}
+
+	&__video {
+		flex: auto;
+		align-self: stretch;
+		min-height: 400px;
+		background-position: 83% 31%;
+		@include adaptive-value-base('border-top-right-radius', 170, 100, 1);
+		border-bottom-right-radius: 15px;
+
+		.video__play {
+			@include adaptive-value-base('top', 70, 40, 1);
+			right: 40px;
+
+			@include mq(sm) {
+				right: unset;
+				left: 30px;
+			}
+		}
+
+		&:not(:last-child) {
+			@include mq(lg) {
+				margin-bottom: 30px;
+			}
+		}
+
+		@include mq(xl) {
+			margin-left: -15px;
+		}
+
+		@include mq(lg) {
+			width: calc(100% + 30px);
+			height: 80vmin;
+			min-height: auto;
+		}
+	}
+
 	&__content {
 		width: 100%;
-		max-width: 690px;
-		padding: 40px 0;
+
+		@include mq(lg, min) {
+			@include adaptive-value-base('max-width', 609, 400, 1);
+			padding: 70px 0;
+		}
 	}
 
 	&__text {
 		p {
 			&:not(:last-child) {
-				margin-bottom: 20px;
+				@include adaptive-value-base('margin-bottom', 20, 12, 1);
 			}
 		}
 	}
