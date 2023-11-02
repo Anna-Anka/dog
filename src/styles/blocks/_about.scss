@@ -48,14 +48,14 @@
 	&__video {
 		flex: auto;
 		align-self: stretch;
-		min-height: 400px;
+		min-height: 620px;
 		background-position: 83% 31%;
 		@include adaptive-value-base('border-top-right-radius', 170, 100, 1);
 		border-bottom-right-radius: 15px;
 
 		.video__play {
 			@include adaptive-value-base('top', 70, 40, 1);
-			right: 40px;
+			@include adaptive-value-base('right', 70, 40, 1);
 
 			@include mq(sm) {
 				right: unset;
@@ -76,7 +76,8 @@
 		@include mq(lg) {
 			width: calc(100% + 30px);
 			height: 80vmin;
-			min-height: auto;
+			min-height: 250px;
+			border-bottom-right-radius: 0;
 		}
 	}
 
