@@ -1,13 +1,10 @@
 import { paths } from '../../gulpfile.babel';
 import { plugins } from '../plugins';
 
-const { argv } = plugins.yargs;
-const production = !!argv.production;
-
 plugins.gulp.task('images', () => {
     const result = plugins.gulp.src(paths.images.src)
-        .pipe(plugins.gulpif(!production, plugins.newer(paths.images.app)))
-        .pipe(plugins.gulpif(production, plugins.imagemin([
+        .pipe(plugins.newer(paths.images.app))
+        .pipe(plugins.imagemin([
             plugins.imageminGiflossy({
                 optimizationLevel: 3,
                 optimize: 3,
@@ -22,7 +19,7 @@ plugins.gulp.task('images', () => {
             }),
             plugins.imageminMozjpeg({
                 progressive: true,
-                quality: 90,
+                quality: 95,
             }),
             plugins.imagemin.svgo({
                 plugins: [
@@ -36,7 +33,7 @@ plugins.gulp.task('images', () => {
                     { collapseGroups: true },
                 ],
             }),
-        ])))
+        ]))
         .pipe(plugins.gulp.dest(paths.images.app))
         .pipe(plugins.debug({
             title: 'Images',
