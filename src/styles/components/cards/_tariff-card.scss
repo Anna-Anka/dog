@@ -38,24 +38,16 @@
 
 	&__items {
 		@include adaptive-value-base('margin-bottom', 40, 25, 1);
+		@include adaptive-value-base('padding-left', 34, 24, 1);
+		list-style-image: url('../img/icons/paw.svg');
+
+		&::marker {
+			width: 24px;
+			height: 24px;
+		}
 	}
 
 	li {
-		position: relative;
-		@include adaptive-value-base('padding-left', 34, 24, 1);
-
-		&::before {
-			position: absolute;
-			left: 0;
-			@include adaptive-value-base('top', 0, 2, 1);
-			@include adaptive-value-base('width', 24, 16, 1);
-			@include adaptive-value-base('height', 24, 16, 1);
-
-			background-image: url('../img/icons/paw.svg');
-			content: '';
-			@include bg-contain;
-		}
-
 		&:not(:last-child) {
 			@include adaptive-value-base('margin-bottom', 20, 15, 1);
 		}
