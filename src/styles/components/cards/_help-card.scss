@@ -1,0 +1,57 @@
+.help-card {
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	width: 100%;
+
+	&__decor {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: 30px 16px 16px;
+		overflow: hidden;
+
+		@include mq(sm) {
+			align-items: flex-end;
+			height: unset;
+			padding: 12px;
+			background-color: var(--color-blue-800);
+			border-radius: 8px;
+		}
+
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			fill: var(--color-blue-800);
+
+			@include mq(sm) {
+				display: none;
+			}
+		}
+	}
+
+	&__subtitle {
+		position: relative;
+		z-index: 2;
+		color: var(--color-white);
+		font-weight: var(--font-weight-medium);
+		@include adaptive-value-base('font-size', 22, 18, 1);
+	}
+
+	&__img {
+		width: 100%;
+		height: 320px;
+		object-fit: cover;
+		border-radius: 15px;
+
+		picture {
+			display: block;
+		}
+	}
+}

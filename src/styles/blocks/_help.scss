@@ -1,0 +1,17 @@
+.help {
+	&__title {
+		text-align: center;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptive-value-base('gap', 30, 20, 1);
+	}
+
+	&__item {
+		flex-grow: 1;
+		flex-wrap: wrap;
+		@include adaptive-value-base('width', 382, 220, 1);
+	}
+}
