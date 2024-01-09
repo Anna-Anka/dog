@@ -7,11 +7,17 @@
 	padding: 4px 0;
 	color: var(--color-white);
 	background-color: var(--color-blue-800);
+	transform: translateY(0);
+	transition: transform 0.3s ease-out;
 
 	&--fixed {
 		position: fixed;
 		transform: translateY(0);
-		transition: transform 0.35s ease-out;
+	}
+
+	&--hide {
+		position: fixed;
+		transform: translateY(-100%);
 	}
 
 	&__navigation {
