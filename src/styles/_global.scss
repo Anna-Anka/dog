@@ -55,7 +55,8 @@ body {
 }
 
 .section {
-	@include adaptive-value-base('padding-bottom', 100, 70, 1);
+	@include adaptive-value-base('padding-bottom', 50, 35, 1);
+	@include adaptive-value-base('padding-top', 50, 35, 1);
 }
 
 .sr-only {

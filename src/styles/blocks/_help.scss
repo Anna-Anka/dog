@@ -1,4 +1,6 @@
 .help {
+	@include adaptive-value-base('padding-bottom', 100, 70, 1);
+
 	&__title {
 		text-align: center;
 	}

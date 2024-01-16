@@ -1,4 +1,6 @@
 .contacts {
+	@include adaptive-value-base('padding-bottom', 100, 70, 1);
+
 	&__wrapper {
 		display: flex;
 		gap: 35px;
